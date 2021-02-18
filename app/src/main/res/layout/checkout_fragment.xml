@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.CheckoutFragment">
+
+
+    <TextView
+        android:id="@+id/txt_checkout_username"
+        style="@style/sub_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:text="name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txt_checkout_email"
+        style="@style/sub_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="email"
+        app:layout_constraintStart_toStartOf="@+id/txt_checkout_username"
+        app:layout_constraintTop_toBottomOf="@+id/txt_checkout_username" />
+
+
+    <TextView
+        android:id="@+id/txt_checkout_phone"
+        style="@style/sub_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="phone"
+        app:layout_constraintStart_toStartOf="@+id/txt_checkout_email"
+        app:layout_constraintTop_toBottomOf="@+id/txt_checkout_email" />
+
+    <TextView
+        android:id="@+id/txt_checkout_city"
+        style="@style/sub_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="City"
+        app:layout_constraintStart_toStartOf="@+id/txt_checkout_email"
+        app:layout_constraintTop_toBottomOf="@+id/txt_checkout_phone" />
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_margin="24dp"
+        android:background="#4D000000"
+        app:layout_constraintTop_toBottomOf="@+id/txt_checkout_city"
+        tools:layout_editor_absoluteX="32dp" />
+
+    <TextView
+        android:id="@+id/txt_checkout_car_brand"
+        style="@style/sub_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="car brand"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/txt_checkout_phone"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/txt_checkout_car_price"
+        style="@style/sub_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="car price"
+        app:layout_constraintStart_toStartOf="@+id/txt_checkout_phone"
+        app:layout_constraintTop_toBottomOf="@+id/txt_checkout_car_brand" />
+
+    <TextView
+        android:id="@+id/txt_checkout_car_model"
+        style="@style/sub_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="car model"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintStart_toEndOf="@+id/txt_checkout_car_brand"
+        app:layout_constraintTop_toTopOf="@+id/txt_checkout_car_brand" />
+
+
+    <TextView
+        android:id="@+id/txt_checkout_car_garantie"
+        style="@style/sub_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_checkout_car_price"
+        app:layout_constraintTop_toBottomOf="@+id/txt_checkout_car_price" />
+
+
+    <TextView
+        android:id="@+id/txt_checkout_car_roadSide"
+        style="@style/sub_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="roadSide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_checkout_car_garantie"
+        app:layout_constraintTop_toBottomOf="@+id/txt_checkout_car_garantie" />
+
+
+    <TextView
+        android:id="@+id/btn_back2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="Back"
+        android:visibility="gone"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_checkout_car_roadSide"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="39dp">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_back"
+            android:text="Back"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@+id/txt_checkout_car_roadSide"
+            tools:layout_editor_absoluteX="32dp" />
+
+        <Button
+            android:id="@+id/btn_submit2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn"
+            android:text="Submit"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@+id/txt_checkout_car_roadSide"
+            tools:layout_editor_absoluteX="32dp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_submit"
+        style="@style/sub_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:visibility="gone"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/line" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="4dp"
+        android:id="@+id/all_item_card">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/tv_image_all"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                android:src="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_title_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="title"
+                app:layout_constraintStart_toEndOf="@+id/tv_image_all"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/sub_text" />
+
+
+            <TextView
+                android:id="@+id/txt_desc_all"
+                style="@style/sub_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="description"
+                app:layout_constraintStart_toStartOf="@+id/txt_title_all"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title_all" />
+
+
+            <TextView
+                android:id="@+id/txt_brand_all"
+                style="@style/sub_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="sfsf"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/txt_desc_all"
+                app:layout_constraintTop_toBottomOf="@+id/txt_desc_all" />
+
+            <TextView
+                android:id="@+id/txt_mileage_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100km"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txt_brand_all"
+                app:layout_constraintTop_toBottomOf="@+id/txt_brand_all" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

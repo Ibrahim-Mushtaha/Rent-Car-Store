@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Cars</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="long_string">Lorem ipsum dolor sit amet, ante a, voluptas imperdiet, ac dolor a quisque ac et orci. Sed libero tempor provident pede libero</string>
+    <string name="onboarding_description">Lorem ipsum dolor sit amet, ante a, voluptas imperdiet, ac dolor a quisque ac et orci. Sed libero tempor provident pede libero</string>
+
+
+    <array name="city">
+        <item>palestine</item>
+        <item>Egypt</item>
+        <item>USA</item>
+    </array>
+</resources>

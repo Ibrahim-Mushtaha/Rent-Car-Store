@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/home_Fragment">
+
+    <fragment
+        android:id="@+id/home_Fragment"
+        android:name="com.example.cars.ui.fragment.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_home_Fragment_to_details_Fragment"
+            app:destination="@id/details_Fragment" />
+        <action
+            android:id="@+id/action_home_Fragment_to_allListFragment"
+            app:destination="@id/allListFragment" />
+        <action
+            android:id="@+id/action_home_Fragment_to_search_Fragment"
+            app:destination="@id/search_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/details_Fragment"
+        android:name="com.example.cars.ui.fragment.DetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/details_fragment">
+        <action
+            android:id="@+id/action_details_Fragment_to_home_Fragment"
+            app:destination="@id/home_Fragment" />
+        <argument
+            android:name="NewCarElement"
+            app:argType="com.example.cars.Model.CarNewElement" />
+        <action
+            android:id="@+id/action_details_Fragment_to_formFragment3"
+            app:destination="@id/formFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoarding_Fragment"
+        android:name="com.example.cars.ui.fragment.OnBoardingFragment"
+        android:label="on_boarding_fragment"
+        tools:layout="@layout/on_boarding_fragment" >
+        <action
+            android:id="@+id/action_onBoarding_Fragment_to_home_Fragment"
+            app:destination="@id/home_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allListFragment"
+        android:name="com.example.cars.ui.fragment.AllListFragment"
+        android:label="All Car"
+        tools:layout="@layout/all_list_fragment" >
+        <action
+            android:id="@+id/action_allListFragment_to_home_Fragment"
+            app:destination="@id/home_Fragment" />
+        <argument
+            android:name="type"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_allListFragment_to_details_Fragment"
+            app:destination="@id/details_Fragment" />
+        <argument
+            android:name="choice"
+            app:argType="string" />
+        <argument
+            android:name="model_type"
+            app:argType="string" />
+        <argument
+            android:name="filter_type"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/search_Fragment"
+        android:name="com.example.cars.ui.fragment.SearchFragment"
+        android:label="search_fragment"
+        tools:layout="@layout/search_fragment" >
+        <action
+            android:id="@+id/action_search_Fragment_to_home_Fragment"
+            app:destination="@id/home_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="com.example.cars.ui.fragment.FormFragment"
+        android:label="Send Request"
+        tools:layout="@layout/form_fragment">
+        <action
+            android:id="@+id/action_formFragment_to_details_Fragment3"
+            app:destination="@id/details_Fragment" />
+        <argument
+            android:name="form"
+            app:argType="com.example.cars.Model.CarNewElement"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_formFragment_to_checkout_Fragment"
+            app:destination="@id/checkout_Fragment" />
+        <argument
+            android:name="check_user"
+            app:argType="com.example.cars.Model.User" />
+        <action
+            android:id="@+id/action_formFragment_to_guarantees_Fragment"
+            app:destination="@id/guarantees_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkout_Fragment"
+        android:name="com.example.cars.ui.fragment.CheckoutFragment"
+        android:label="checkout"
+        tools:layout="@layout/checkout_fragment">
+        <argument
+            android:name="user_informatino"
+            app:argType="com.example.cars.Model.User" />
+        <argument
+            android:name="form_d"
+            app:argType="com.example.cars.Model.CarNewElement" />
+        <action
+            android:id="@+id/action_checkout_Fragment_to_guarantees_Fragment"
+            app:destination="@id/guarantees_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/guarantees_Fragment"
+        android:name="com.example.cars.ui.fragment.GuaranteesFragment"
+        android:label="Guarantees"
+        tools:layout="@layout/guarantees_fragment">
+        <action
+            android:id="@+id/action_guarantees_Fragment_to_formFragment"
+            app:destination="@id/formFragment" />
+        <argument
+            android:name="user"
+            app:argType="com.example.cars.Model.User" />
+        <argument
+            android:name="car"
+            app:argType="com.example.cars.Model.CarNewElement" />
+        <action
+            android:id="@+id/action_guarantees_Fragment_to_checkout_Fragment"
+            app:destination="@id/checkout_Fragment" />
+    </fragment>
+</navigation>

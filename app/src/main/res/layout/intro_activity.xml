@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.IntroActivity">
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager_intro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#FDFDFD"/>
+
+    <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+        android:id="@+id/indicator_boarding_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        app:dotsColor="#588BEB"
+        app:dotsSize="10dp"
+        app:dotsCornerRadius="90dp"
+        app:tabBackground="@drawable/slider_selector"
+        app:tabIndicatorColor="@android:color/transparent" />
+
+
+
+</RelativeLayout>
