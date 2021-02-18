@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cars.Model.Brand
-import com.example.cars.Model.Main_model.brand_test
+import com.example.cars.Model.Brandtest
 import com.example.cars.R
 import com.example.cars.databinding.ModelItemBinding
 import kotlinx.android.synthetic.main.model_item.view.*
@@ -18,7 +18,7 @@ class model_type_Adapter(
     RecyclerView.Adapter<model_type_Adapter.MyViewHolder>() {
 
 
-    var array = ArrayList<brand_test>()
+    var array = ArrayList<Brandtest>()
     class MyViewHolder(val item: ModelItemBinding) : RecyclerView.ViewHolder(item.root) {
 
 

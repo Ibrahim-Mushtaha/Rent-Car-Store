@@ -1,4 +1,4 @@
-package com.example.cars.Model
+package com.example.cars.util
 
 import android.app.Activity
 import android.app.Dialog

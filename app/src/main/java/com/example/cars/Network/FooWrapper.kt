@@ -21,27 +21,4 @@ class FooWrapper {
     ): ArrayList<T> {
         return gson.fromJson(jsonArray, type)
     }
-
-
-
-    private fun getType(
-        rawClass: Class<*>,
-        parameterClass: Class<*>
-    ): Type? {
-        return object : ParameterizedType {
-
-
-            override fun getRawType(): Type {
-               return rawClass
-            }
-
-            override fun getOwnerType(): Type? {
-               return null
-            }
-
-            override fun getActualTypeArguments(): Array<Type> {
-              return arrayOf(parameterClass)
-            }
-        }
-    }
 }

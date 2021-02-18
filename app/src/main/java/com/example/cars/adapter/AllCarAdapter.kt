@@ -11,7 +11,7 @@ import android.widget.Filterable
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cars.Model.CarNewElement
-import com.example.cars.Model.Network.RestClint
+import com.example.cars.Network.RestClint
 import com.example.cars.R
 import com.example.cars.databinding.CarItemAllBinding
 import com.example.news_app.model.Generic.FooWrapper

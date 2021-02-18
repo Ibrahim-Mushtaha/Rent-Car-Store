@@ -11,8 +11,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.example.cars.Model.CarNewElement
-import com.example.cars.Model.Main_model.brand_test
-import com.example.cars.Model.myApp
+import com.example.cars.Model.Brandtest
+import com.example.cars.util.myApp
 import com.example.cars.R
 import com.example.cars.adapter.NewCarAdapter
 import com.example.cars.adapter.Search_Filter.Brand_Adapter
@@ -44,8 +44,8 @@ class HomeFragment : Fragment() , NewCarAdapter.onClick,IPickResult,Brand_Adapte
 
     var array = ArrayList<CarNewElement>()
     var used_car = ArrayList<CarNewElement>()
-    var brand_array_api = ArrayList<brand_test>()
-    var selected_array = ArrayList<brand_test>()
+    var brand_array_api = ArrayList<Brandtest>()
+    var selected_array = ArrayList<Brandtest>()
 
     private val adapter by lazy {
         NewCarAdapter(requireActivity(), array, this)
@@ -166,7 +166,7 @@ class HomeFragment : Fragment() , NewCarAdapter.onClick,IPickResult,Brand_Adapte
                }
                }else{
                brand_array_api.add(
-                   brand_test(
+                   Brandtest(
                        it[i].brand.id,
                        it[i].brand.title,
                        it[i].brand.image
@@ -183,14 +183,14 @@ class HomeFragment : Fragment() , NewCarAdapter.onClick,IPickResult,Brand_Adapte
                 myApp.dialog.hide()
                 for (i in 0 until it.size){
                     brand_array_api.add(
-                        brand_test(
+                        Brandtest(
                             it[i].brand.id,
                             it[i].brand.title,
                             it[i].brand.image
                         )
                     )
                     Log.e("eee",
-                        brand_test(
+                        Brandtest(
                             it[i].brand.id,
                             it[i].brand.title,
                             it[i].brand.image

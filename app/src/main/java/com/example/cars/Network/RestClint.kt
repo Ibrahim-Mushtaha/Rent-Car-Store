@@ -1,15 +1,8 @@
-package com.example.cars.Model.Network
+package com.example.cars.Network
 
-import android.util.Log
 import com.loopj.android.http.AsyncHttpClient
 import com.loopj.android.http.AsyncHttpResponseHandler
-import com.loopj.android.http.JsonHttpResponseHandler
 import com.loopj.android.http.RequestParams
-import cz.msebera.android.httpclient.Header
-import org.json.JSONArray
-import java.io.File
-import java.io.FileInputStream
-import java.io.InputStream
 
 class RestClint {
     companion object {
@@ -26,15 +19,6 @@ class RestClint {
         client[url, responseHandler]
     }
 
-
-    fun get_guarantees(
-        url: String,
-        responseHandler: AsyncHttpResponseHandler?
-    ){
-        getAbsoluteUrl(url)
-    }
-
-
     fun post(
         url: String,
         params: RequestParams?,
@@ -44,19 +28,6 @@ class RestClint {
         client.post(url, params, responseHandler)
     }
 
-    private fun getAbsoluteUrl(relativeUrl: String): String? {
-        return Guarantees_URL + relativeUrl
-    }
-
-
-
-    fun uploudFile(
-        url: String,
-        params: RequestParams?,
-        responseHandler: AsyncHttpResponseHandler?
-    ) {
-        client.post(getAbsoluteUrl(url), params, responseHandler)
-    }
 
 
 }

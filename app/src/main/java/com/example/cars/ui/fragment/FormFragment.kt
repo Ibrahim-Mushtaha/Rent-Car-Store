@@ -74,7 +74,6 @@ class FormFragment : Fragment() {
                         obj,
                         args.form!!
                     )
-                //val action  =  FormFragmentDirections.actionFormFragmentToCheckoutFragment(obj,args.form!!)
                 Navigation.findNavController(root).navigate(action)
             }
         }else{

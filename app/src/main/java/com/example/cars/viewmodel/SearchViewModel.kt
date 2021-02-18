@@ -5,13 +5,11 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.cars.Model.CarNewElement
-import com.example.cars.Model.Main_model.Guarantees
-import com.example.cars.Model.Network.RestClint
+import com.example.cars.Model.Guarantees
+import com.example.cars.Network.RestClint
 import com.example.news_app.model.Generic.FooWrapper
 import com.google.gson.reflect.TypeToken
 import com.loopj.android.http.JsonHttpResponseHandler
-import com.loopj.android.http.TextHttpResponseHandler
 import cz.msebera.android.httpclient.Header
 import org.json.JSONObject
 

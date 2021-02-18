@@ -7,7 +7,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.cars.Model.Brand
 import com.example.cars.Model.CarNewElement
-import com.example.cars.Model.Network.RestClint.Companion.BASE_URL
+import com.example.cars.Network.RestClint.Companion.BASE_URL
+import com.example.cars.other.*
 import com.example.news_app.model.Generic.FooWrapper
 import com.google.gson.reflect.TypeToken
 import com.loopj.android.http.JsonHttpResponseHandler
@@ -20,7 +21,7 @@ class CarViewModel(application: Application) : AndroidViewModel(application) {
 
 
     val generator = FooWrapper()
-    var restClint = com.example.cars.Model.Network.RestClint()
+    var restClint = com.example.cars.Network.RestClint()
 
     private val _cars = MutableLiveData<List<CarNewElement>>()
 
@@ -53,7 +54,7 @@ class CarViewModel(application: Application) : AndroidViewModel(application) {
                 response: JSONObject?
             ) {
                 if (statusCode == 200) {
-                    val x = response!!.getJSONObject("data")
+                    val x = response!!.getJSONObject(DATA)
 
 
 
@@ -119,14 +120,14 @@ class CarViewModel(application: Application) : AndroidViewModel(application) {
                 headers: Array<out Header>?,
                 response: JSONObject?
             ) {
-                var arrayList= ArrayList<Brand>()
+                val arrayList= ArrayList<Brand>()
                 if (statusCode == 200) {
-                    val x = response!!.getJSONObject("data")
+                    val x = response!!.getJSONObject(DATA)
 
 
 
-                    val car_new=x.getJSONArray("car_new")
-                    val car_used=x.getJSONArray("car_used")
+                    val car_new=x.getJSONArray(CARNEW)
+                    val car_used=x.getJSONArray(CARUSED)
 
 
                     val mutableListTutorialType =

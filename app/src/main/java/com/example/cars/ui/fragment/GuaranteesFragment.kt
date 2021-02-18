@@ -12,9 +12,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
-import com.example.cars.Model.Network.RestClint
+import com.example.cars.Network.RestClint
 import com.example.cars.Model.User
-import com.example.cars.Model.myApp
+import com.example.cars.util.myApp
 import com.example.cars.R
 
 import com.example.cars.other.*

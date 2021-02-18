@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.cars.Model.Main_model.brand_test
+import com.example.cars.Model.Brandtest
 import com.example.cars.R
 import com.example.cars.databinding.BrandItemBinding
 import com.squareup.picasso.Picasso
@@ -13,13 +13,13 @@ import kotlinx.android.synthetic.main.brand_item.view.*
 
 
 class Brand_Adapter(
-    var activity: Activity, var data: MutableList<brand_test>, val itemclic: onClick
+    var activity: Activity, var data: MutableList<Brandtest>, val itemclic: onClick
 ) :
     RecyclerView.Adapter<Brand_Adapter.MyViewHolder>() {
 
 
     var last_position =0
-    var array = ArrayList<brand_test>()
+    var array = ArrayList<Brandtest>()
     class MyViewHolder(val item: BrandItemBinding) : RecyclerView.ViewHolder(item.root)
 
 
